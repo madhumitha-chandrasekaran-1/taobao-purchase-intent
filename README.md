@@ -2,6 +2,8 @@
 
 Exploratory analysis and purchase-intent modeling on a sample of the Taobao **UserBehavior** dataset, released by Alibaba on [Tianchi](https://tianchi.aliyun.com/dataset/649) (100M events in full; [Kaggle mirror](https://www.kaggle.com/datasets/marwa80/userbehavior)). See [Data source and licence](#data-source-and-licence).
 
+**Live dashboard:** [taobao-purchase-intent.streamlit.app](https://taobao-purchase-intent-nporuhbvrvk4wor5dcjmdn.streamlit.app/)
+
 **Research question:** does enriching a simple view-signal baseline with deeper engagement features (favorites, cart adds, repeat visits, recency, funnel breadth) meaningfully improve purchase prediction?
 
 **Short answer:** yes. Moving from V1 (logistic regression on a binary view signal) to V2 (XGBoost on 10 engagement features) raises test PR-AUC from **0.093 to 0.613**.
@@ -433,10 +435,10 @@ cd ~/data && streamlit run app.py
 | Train vs test, model vs features, ablation | ✓ tables | ✓ tables |
 | Events-per-user boxplots, deepest stage, category conversion, hour/day patterns | ✓ | — |
 
-**Deploying (Streamlit Community Cloud, free):** check the [licence](#data-source-and-licence) first, because deploying publishes `model_ready.csv.gz`.
-1. Push this folder to its own public GitHub repo.
-2. At [share.streamlit.io](https://share.streamlit.io), choose **Create app** and pick the repo, the branch `main` and the file `app.py`.
-3. Put the resulting `*.streamlit.app` URL in `README_URL` (in `app.py`) and in `PORTFOLIO.md`.
+**Deployment:** the dashboard is hosted on Streamlit Community Cloud at [taobao-purchase-intent.streamlit.app](https://taobao-purchase-intent-nporuhbvrvk4wor5dcjmdn.streamlit.app/).
+- It redeploys automatically on every push to `main`.
+- It installs `requirements.txt` and reads `model_ready.csv.gz` from the repo.
+- On the free tier the app sleeps after a period without visitors and takes a few seconds to wake.
 
 Troubleshooting:
 

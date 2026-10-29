@@ -1,6 +1,6 @@
 # Attention Depth Score — Predicting Purchases from How People Engage
 
-**Dashboard:** _add the Streamlit URL once it's live_ · **Code:** [github.com/madhumitha-chandrasekaran-1/taobao-purchase-intent](https://github.com/madhumitha-chandrasekaran-1/taobao-purchase-intent) · **Full technical write-up:** [README.md](README.md)
+**Dashboard:** [taobao-purchase-intent.streamlit.app](https://taobao-purchase-intent-nporuhbvrvk4wor5dcjmdn.streamlit.app/) · **Code:** [github.com/madhumitha-chandrasekaran-1/taobao-purchase-intent](https://github.com/madhumitha-chandrasekaran-1/taobao-purchase-intent) · **Full technical write-up:** [README.md](README.md)
 
 > Clicks and views treat a half-second glance the same as someone who comes back three days in a row. I tested whether *depth* and *persistence* of attention predict purchases better than a simple "did they view it?" signal, using real e-commerce behavior data from Taobao.
 
@@ -30,7 +30,7 @@ Modeled purchase intent on a 10,000-user sample of Alibaba's 100M-event Taobao d
   - 582 out-of-window timestamps had pushed a recency feature to an impossible 126 days.
   - A UTC vs Beijing-time mismatch had shifted hourly patterns by 8 hours, and a filter built on it had dropped 11,764 valid events.
 - Chose the classification cutoff on cross-validated training predictions, not the test set. Applied once to test, it doubled F1 from 0.28 to 0.59.
-- Built a 4-tab Streamlit + Plotly dashboard presenting the EDA, features, model comparisons and limitations. *(Change "Built" to "Deployed" and add the link once it's live.)*
+- Deployed a 4-tab [Streamlit + Plotly dashboard](https://taobao-purchase-intent-nporuhbvrvk4wor5dcjmdn.streamlit.app/) presenting the EDA, features, model comparisons and limitations.
 
 ---
 

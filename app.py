@@ -11,7 +11,7 @@ st.set_page_config(page_title="Attention Depth Score", layout="wide", page_icon=
 APP_DIR = Path(__file__).parent
 
 # while it's empty, the sidebar shows the local README.md instead.
-README_URL = ""
+README_URL = "https://github.com/madhumitha-chandrasekaran-1/taobao-purchase-intent#readme"
 
 V1_COLOR = "#eb6834"   # V1 baseline
 V2_COLOR = "#2a78d6"   # V2 attention score (also the single-series color)
